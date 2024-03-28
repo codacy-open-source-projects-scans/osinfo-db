@@ -1,0 +1,54 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://freedos.org/freedos/1.2">
+    <short-id>freedos1.2</short-id>
+    <name>FreeDOS 1.2</name>
+    <version>1.2</version>
+    <vendor>FreeDOS</vendor>
+    <family>dos</family>
+    <distro>freedos</distro>
+
+    <release-date>2016-12-25</release-date>
+    <eol-date>2022-02-20</eol-date>
+
+    <variant id="standard">
+      <name>FreeDOS 1.2 "Standard" Installer</name>
+    </variant>
+    <variant id="legacy">
+      <name>FreeDOS 1.2 "Legacy" Installer</name>
+    </variant>
+
+    <media arch="i686">
+      <variant id="standard"/>
+      <url>https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/official/FD12CD.iso</url>
+      <iso>
+        <volume-id>FD-SETUP</volume-id>
+        <system-id>LINUX</system-id>
+      </iso>
+    </media>
+
+    <media arch="i686">
+      <variant id="legacy"/>
+      <url>https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/official/FD12LGCY.iso</url>
+      <iso>
+        <volume-id>FDI-CD</volume-id>
+        <system-id>LINUX</system-id>
+      </iso>
+    </media>
+
+    <resources arch="all">
+      <minimum>
+        <n-cpus>1</n-cpus>
+        <cpu>1000000000</cpu>
+        <ram>33554432</ram>
+        <storage>209715200</storage>
+      </minimum>
+
+      <recommended>
+        <ram>67108864</ram>
+        <storage>419430400</storage>
+      </recommended>
+    </resources>
+  </os>
+</libosinfo>
