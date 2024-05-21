@@ -1,22 +1,20 @@
 <libosinfo version="0.0.1">
 <!-- Licensed under the GNU General Public License version 2 or later.
      See http://www.gnu.org/licenses/ for a copy of the license text -->
-  <os id="http://endlessos.com/eos/4.0">
-    <short-id>eos4.0</short-id>
-    <name>Endless OS 4.0</name>
-    <version>4.0</version>
+  <os id="http://endlessos.com/eos/6.0">
+    <short-id>eos6.0</short-id>
+    <name>Endless OS 6.0</name>
+    <version>6.0</version>
     <vendor>Endless OS Foundation LLC</vendor>
     <family>linux</family>
     <distro>eos</distro>
 
-    <upgrades id="http://endlessos.com/eos/3.9"/>
-    <derives-from id="http://endlessos.com/eos/3.9"/>
+    <upgrades id="http://endlessos.com/eos/5.1"/>
+    <derives-from id="http://endlessos.com/eos/5.1"/>
 
 
-    <release-date>2021-11-24</release-date>
+    <release-date>2024-05-14</release-date>
 
-
-    <eol-date>2024-02-29</eol-date>
 
 
 
@@ -26,9 +24,9 @@
 
     <media arch="x86_64" live="true">
       <variant id="base"/>
-      <url>https://images-dl.endlessm.com/release/4.0.10/eos-amd64-amd64/base/eos-eos4.0-amd64-amd64.221014-095210.base.iso</url>
+      <url>https://images-dl.endlessm.com/release/6.0.0/eos-amd64-amd64/base/eos-eos6.0-amd64-amd64.240514-082534.base.iso</url>
       <iso>
-        <volume-id>Endless-OS-4-0-\d+-base$</volume-id>
+        <volume-id>Endless-OS-6-0-\d+-base$</volume-id>
         <publisher-id>ENDLESS OS FOUNDATION LLC</publisher-id>
       </iso>
     </media>
@@ -39,9 +37,9 @@
 
     <media arch="x86_64" live="true">
       <variant id="en"/>
-      <url>https://images-dl.endlessm.com/release/4.0.10/eos-amd64-amd64/en/eos-eos4.0-amd64-amd64.221014-095617.en.iso</url>
+      <url>https://images-dl.endlessm.com/release/6.0.0/eos-amd64-amd64/en/eos-eos6.0-amd64-amd64.240514-082543.en.iso</url>
       <iso>
-        <volume-id>Endless-OS-4-0-\d+-en$</volume-id>
+        <volume-id>Endless-OS-6-0-\d+-en$</volume-id>
         <publisher-id>ENDLESS OS FOUNDATION LLC</publisher-id>
       </iso>
     </media>
@@ -52,9 +50,9 @@
 
     <media arch="x86_64" live="true">
       <variant id="es"/>
-      <url>https://images-dl.endlessm.com/release/4.0.10/eos-amd64-amd64/es/eos-eos4.0-amd64-amd64.221014-100339.es.iso</url>
+      <url>https://images-dl.endlessm.com/release/6.0.0/eos-amd64-amd64/es/eos-eos6.0-amd64-amd64.240514-082543.es.iso</url>
       <iso>
-        <volume-id>Endless-OS-4-0-\d+-es$</volume-id>
+        <volume-id>Endless-OS-6-0-\d+-es$</volume-id>
         <publisher-id>ENDLESS OS FOUNDATION LLC</publisher-id>
       </iso>
     </media>
@@ -65,9 +63,9 @@
 
     <media arch="x86_64" live="true">
       <variant id="fr"/>
-      <url>https://images-dl.endlessm.com/release/4.0.10/eos-amd64-amd64/fr/eos-eos4.0-amd64-amd64.221014-100709.fr.iso</url>
+      <url>https://images-dl.endlessm.com/release/6.0.0/eos-amd64-amd64/fr/eos-eos6.0-amd64-amd64.240514-082553.fr.iso</url>
       <iso>
-        <volume-id>Endless-OS-4-0-\d+-fr$</volume-id>
+        <volume-id>Endless-OS-6-0-\d+-fr$</volume-id>
         <publisher-id>ENDLESS OS FOUNDATION LLC</publisher-id>
       </iso>
     </media>
@@ -78,9 +76,9 @@
 
     <media arch="x86_64" live="true">
       <variant id="pt_BR"/>
-      <url>https://images-dl.endlessm.com/release/4.0.10/eos-amd64-amd64/pt_BR/eos-eos4.0-amd64-amd64.221014-103929.pt_BR.iso</url>
+      <url>https://images-dl.endlessm.com/release/6.0.0/eos-amd64-amd64/pt_BR/eos-eos6.0-amd64-amd64.240514-082553.pt_BR.iso</url>
       <iso>
-        <volume-id>Endless-OS-4-0-\d+-pt_BR$</volume-id>
+        <volume-id>Endless-OS-6-0-\d+-pt_BR$</volume-id>
         <publisher-id>ENDLESS OS FOUNDATION LLC</publisher-id>
       </iso>
     </media>
@@ -93,7 +91,7 @@
     <media arch="all" live="true">
       <variant id="other"/>
       <iso>
-        <volume-id>\D+-4-0-\d+</volume-id>
+        <volume-id>\D+-6-0-\d+</volume-id>
         <publisher-id>ENDLESS OS FOUNDATION LLC</publisher-id>
       </iso>
     </media>

@@ -110,6 +110,8 @@ def predecessor(series):
         return "3.9"
     if series == "5.0":
         return "4.0"
+    if series == "6.0":
+        return "5.1"
     return adj(series, -1)
 
 
@@ -120,6 +122,8 @@ def successor(series):
         return "4.0"
     if series == "4.0":
         return "5.0"
+    if series == "5.1":
+        return "6.0"
 
     return adj(series, 1)
 
@@ -229,8 +233,9 @@ def main():
             eol_date = None
         else:
             if current_series == "4.0":
-                # Endless OS 4 is still supported, in parallel to Endless OS 5
-                eol_date = None
+                # Endless OS 4 was an LTS release, supported in parallel with
+                # Endless OS 5.x for a time; it was discontinued on this date.
+                eol_date = datetime.date(2024, 2, 29)
             else:
                 # Date of first release in next series
                 eol_date = guess_release_date(next_series_images[0])
