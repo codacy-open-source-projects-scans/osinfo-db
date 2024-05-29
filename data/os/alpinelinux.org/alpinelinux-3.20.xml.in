@@ -2,18 +2,18 @@
 <libosinfo version="0.0.1">
 <!-- Licensed under the GNU General Public License version 2 or later.
      See http://www.gnu.org/licenses/ for a copy of the license text -->
-  <os id="http://alpinelinux.org/alpinelinux/3.18">
-    <short-id>alpinelinux3.18</short-id>
-    <name>Alpine Linux 3.18</name>
-    <version>3.18</version>
+  <os id="http://alpinelinux.org/alpinelinux/3.20">
+    <short-id>alpinelinux3.20</short-id>
+    <name>Alpine Linux 3.20</name>
+    <version>3.20</version>
     <vendor>Alpine Linux Project</vendor>
     <family>linux</family>
     <distro>alpinelinux</distro>
-    <upgrades id="http://alpinelinux.org/alpinelinux/3.17"/>
-    <derives-from id="http://alpinelinux.org/alpinelinux/3.17"/>
+    <upgrades id="http://alpinelinux.org/alpinelinux/3.19"/>
+    <derives-from id="http://alpinelinux.org/alpinelinux/3.19"/>
 
-    <release-date>2023-05-09</release-date>
-    <eol-date>2025-05-09</eol-date>
+    <release-date>2024-05-22</release-date>
+    <eol-date>2026-04-01</eol-date>
 
     <resources arch="all">
       <minimum>
@@ -31,69 +31,69 @@
     </resources>
 
     <variant id="standard">
-      <name>Alpinelinux 3.18 Standard</name>
+      <name>Alpinelinux 3.20 Standard</name>
     </variant>
     <variant id="extended">
-      <name>Alpinelinux 3.18 Extended</name>
+      <name>Alpinelinux 3.20 Extended</name>
     </variant>
     <variant id="virtual">
-      <name>Alpinelinux 3.18 Virtual</name>
+      <name>Alpinelinux 3.20 Virtual</name>
     </variant>
     <variant id="xen">
-      <name>Alpinelinux 3.18 Xen</name>
+      <name>Alpinelinux 3.20 Xen</name>
     </variant>
 
     <!-- Standard Installer !-->
     <media arch="aarch64">
       <variant id="standard"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/aarch64/alpine-standard-3.18.0-aarch64.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/aarch64/alpine-standard-3.20.0-aarch64.iso</url>
       <iso>
-        <volume-id>alpine-std 3\.18.* aarch64$</volume-id>
+        <volume-id>alpine-std 3\.20.* aarch64$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
     </media>
     <media arch="i686">
       <variant id="standard"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86/alpine-standard-3.18.0-x86.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86/alpine-standard-3.20.0-x86.iso</url>
       <iso>
-        <volume-id>alpine-std 3\.18.* x86$</volume-id>
+        <volume-id>alpine-std 3\.20.* x86$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
     </media>
     <media arch="x86_64">
       <variant id="standard"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.0-x86_64.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-standard-3.20.0-x86_64.iso</url>
       <iso>
-        <volume-id>alpine-std 3\.18.* x86_64$</volume-id>
+        <volume-id>alpine-std 3\.20.* x86_64$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
     </media>
     <media arch="ppc64le">
       <variant id="standard"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/ppc64le/alpine-standard-3.18.0-ppc64le.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/ppc64le/alpine-standard-3.20.0-ppc64le.iso</url>
       <iso>
-        <volume-id>alpine-std 3\.18.* ppc64le$</volume-id>
+        <volume-id>alpine-std 3\.20.* ppc64le$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
     </media>
     <media arch="s390x">
       <variant id="standard"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/s390x/alpine-standard-3.18.0-s390x.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/s390x/alpine-standard-3.20.0-s390x.iso</url>
       <iso>
-        <volume-id>alpine-std 3\.18.* s390x$</volume-id>
+        <volume-id>alpine-std 3\.20.* s390x$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
     </media>
     <media arch="armv7l">
       <variant id="standard"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/armv7/alpine-standard-3.18.0-armv7.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/armv7/alpine-standard-3.20.0-armv7.iso</url>
       <iso>
-        <volume-id>alpine-std 3\.18.* armv7$</volume-id>
+        <volume-id>alpine-std 3\.20.* armv7$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
@@ -102,18 +102,18 @@
     <!-- Extended Installer !-->
     <media arch="i686">
       <variant id="extended"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86/alpine-extended-3.18.0-x86.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86/alpine-extended-3.20.0-x86.iso</url>
       <iso>
-        <volume-id>alpine-ext 3\.18.* x86$</volume-id>
+        <volume-id>alpine-ext 3\.20.* x86$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
     </media>
     <media arch="x86_64">
       <variant id="extended"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-extended-3.18.0-x86_64.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-extended-3.20.0-x86_64.iso</url>
       <iso>
-        <volume-id>alpine-ext 3\.18.* x86_64$</volume-id>
+        <volume-id>alpine-ext 3\.20.* x86_64$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
@@ -122,36 +122,36 @@
     <!-- Virtual Installer !-->
     <media arch="aarch64">
       <variant id="virtual"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/aarch64/alpine-virt-3.18.0-aarch64.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/aarch64/alpine-virt-3.20.0-aarch64.iso</url>
       <iso>
-        <volume-id>alpine-virt 3\.18.* aarch64$</volume-id>
+        <volume-id>alpine-virt 3\.20.* aarch64$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-virt</kernel>
       <initrd>boot/initramfs-virt</initrd>
     </media>
     <media arch="i686">
       <variant id="virtual"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86/alpine-virt-3.18.0-x86.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86/alpine-virt-3.20.0-x86.iso</url>
       <iso>
-        <volume-id>alpine-virt 3\.18.* x86$</volume-id>
+        <volume-id>alpine-virt 3\.20.* x86$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-virt</kernel>
       <initrd>boot/initramfs-virt</initrd>
     </media>
     <media arch="x86_64">
       <variant id="virtual"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-virt-3.18.0-x86_64.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-extended-3.20.0-x86_64.iso</url>
       <iso>
-        <volume-id>alpine-virt 3\.18.* x86_64$</volume-id>
+        <volume-id>alpine-virt 3\.20.* x86_64$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-virt</kernel>
       <initrd>boot/initramfs-virt</initrd>
     </media>
     <media arch="armv7l">
       <variant id="virtual"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/armv7/alpine-virt-3.18.0-armv7.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/armv7/alpine-virt-3.20.0-armv7.iso</url>
       <iso>
-        <volume-id>alpine-virt 3\.18.* armv7$</volume-id>
+        <volume-id>alpine-virt 3\.20.* armv7$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-virt</kernel>
       <initrd>boot/initramfs-virt</initrd>
@@ -160,9 +160,9 @@
     <!-- Xen Installer !-->
     <media arch="x86_64">
       <variant id="xen"/>
-      <url>https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-xen-3.18.0-x86_64.iso</url>
+      <url>https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-xen-3.20.0-x86_64.iso</url>
       <iso>
-        <volume-id>alpine-xen 3\.18.* x86_64$</volume-id>
+        <volume-id>alpine-xen 3\.20.* x86_64$</volume-id>
       </iso>
       <kernel>boot/vmlinuz-lts</kernel>
       <initrd>boot/initramfs-lts</initrd>
