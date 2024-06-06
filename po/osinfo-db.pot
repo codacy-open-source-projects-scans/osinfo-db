@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: osinfo-db\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-14 16:59+0200\n"
+"POT-Creation-Date: 2024-06-03 13:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -283,6 +283,7 @@ msgstr ""
 #: data/os/alpinelinux.org/alpinelinux-3.17.xml.in:9
 #: data/os/alpinelinux.org/alpinelinux-3.18.xml.in:9
 #: data/os/alpinelinux.org/alpinelinux-3.19.xml.in:9
+#: data/os/alpinelinux.org/alpinelinux-3.20.xml.in:9
 #: data/os/alpinelinux.org/alpinelinux-3.5.xml.in:8
 #: data/os/alpinelinux.org/alpinelinux-3.6.xml.in:9
 #: data/os/alpinelinux.org/alpinelinux-3.7.xml.in:9
@@ -487,6 +488,26 @@ msgstr ""
 msgid "Alpinelinux 3.19 Xen"
 msgstr ""
 
+#: data/os/alpinelinux.org/alpinelinux-3.20.xml.in:7
+msgid "Alpine Linux 3.20"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.20.xml.in:34
+msgid "Alpinelinux 3.20 Standard"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.20.xml.in:37
+msgid "Alpinelinux 3.20 Extended"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.20.xml.in:40
+msgid "Alpinelinux 3.20 Virtual"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.20.xml.in:43
+msgid "Alpinelinux 3.20 Xen"
+msgstr ""
+
 #: data/os/alpinelinux.org/alpinelinux-3.5.xml.in:6
 msgid "Alpine Linux 3.5"
 msgstr ""
@@ -544,11 +565,14 @@ msgid "ALT 10.0"
 msgstr ""
 
 #: data/os/altlinux.org/alt-10.0.xml.in:8
-#: data/os/altlinux.org/alt-10.1.xml.in:8 data/os/altlinux.org/alt-8.0.xml.in:8
+#: data/os/altlinux.org/alt-10.1.xml.in:8
+#: data/os/altlinux.org/alt-10.2.xml.in:8
+#: data/os/altlinux.org/alt-10.3.xml.in:8 data/os/altlinux.org/alt-8.0.xml.in:8
 #: data/os/altlinux.org/alt-8.1.xml.in:8 data/os/altlinux.org/alt-8.2.xml.in:8
 #: data/os/altlinux.org/alt-9.0.xml.in:8 data/os/altlinux.org/alt-9.1.xml.in:8
 #: data/os/altlinux.org/alt-9.2.xml.in:8
 #: data/os/altlinux.org/alt-p10.starterkits.xml.in:8
+#: data/os/altlinux.org/alt-p11.starterkits.xml.in:8
 #: data/os/altlinux.org/alt-p8.starterkits.xml.in:8
 #: data/os/altlinux.org/alt-p9.starterkits.xml.in:8
 #: data/os/altlinux.org/alt-sisyphus.xml.in:8
@@ -625,6 +649,58 @@ msgstr ""
 
 #: data/os/altlinux.org/alt-10.1.xml.in:43
 msgid "ALT Simply Live 10.1"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:6
+msgid "ALT 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:19
+msgid "ALT Workstation 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:22
+msgid "ALT Workstation K 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:25
+msgid "ALT Workstation K Live 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:28
+msgid "ALT Education 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:31
+msgid "ALT Education Live 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:34
+msgid "ALT Server 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:37
+msgid "ALT Virtualization Server 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:40
+msgid "ALT Simply 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.2.xml.in:43
+msgid "ALT Simply Live 10.2"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.3.xml.in:6
+msgid "ALT 10.3"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.3.xml.in:19
+msgid "ALT Workstation K 10.3"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.3.xml.in:22
+msgid "ALT Workstation K Live 10.3"
 msgstr ""
 
 #: data/os/altlinux.org/alt-8.0.xml.in:6
@@ -776,6 +852,10 @@ msgstr ""
 
 #: data/os/altlinux.org/alt-p10.starterkits.xml.in:6
 msgid "ALT p10 StarterKits"
+msgstr ""
+
+#: data/os/altlinux.org/alt-p11.starterkits.xml.in:6
+msgid "ALT p11 StarterKits"
 msgstr ""
 
 #: data/os/altlinux.org/alt-p8.starterkits.xml.in:6
@@ -3771,6 +3851,7 @@ msgstr ""
 #: data/os/nixos.org/nixos-22.11.xml.in:8
 #: data/os/nixos.org/nixos-23.05.xml.in:8
 #: data/os/nixos.org/nixos-23.11.xml.in:8
+#: data/os/nixos.org/nixos-24.05.xml.in:8
 #: data/os/nixos.org/nixos-unknown.xml.in:6
 #: data/os/nixos.org/nixos-unknown.xml.in:7
 #: data/os/nixos.org/nixos-unstable.xml.in:8
@@ -3897,6 +3978,22 @@ msgstr ""
 msgid "NixOS 23.11 (Plasma 5 installation CD)"
 msgstr ""
 
+#: data/os/nixos.org/nixos-24.05.xml.in:6
+msgid "NixOS 24.05"
+msgstr ""
+
+#: data/os/nixos.org/nixos-24.05.xml.in:30
+msgid "NixOS 24.05 (minimal installation CD)"
+msgstr ""
+
+#: data/os/nixos.org/nixos-24.05.xml.in:33
+msgid "NixOS 24.05 (GNOME installation CD)"
+msgstr ""
+
+#: data/os/nixos.org/nixos-24.05.xml.in:36
+msgid "NixOS 24.05 (Plasma 6 installation CD)"
+msgstr ""
+
 #: data/os/nixos.org/nixos-unstable.xml.in:6
 msgid "NixOS Unstable"
 msgstr ""
@@ -3910,7 +4007,7 @@ msgid "NixOS Unstable (GNOME installation CD)"
 msgstr ""
 
 #: data/os/nixos.org/nixos-unstable.xml.in:33
-msgid "NixOS Unstable (Plasma 5 installation CD)"
+msgid "NixOS Unstable (Plasma 6 installation CD)"
 msgstr ""
 
 #: data/os/novell.com/netware-4.xml.in:6
