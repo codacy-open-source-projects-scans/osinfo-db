@@ -8,6 +8,7 @@
     <vendor>CentOS</vendor>
     <family>linux</family>
     <distro>centos</distro>
+    <upgrades id="http://centos.org/centos-stream/8"/>
 
     <release-status>rolling</release-status>
 
@@ -163,6 +164,14 @@
     </tree>
 
     <image arch="x86_64" format="containerdisk" cloud-init="true">
+      <url>docker://quay.io/containerdisks/centos-stream:9</url>
+    </image>
+
+    <image arch="aarch64" format="containerdisk" cloud-init="true">
+      <url>docker://quay.io/containerdisks/centos-stream:9</url>
+    </image>
+
+    <image arch="s390x" format="containerdisk" cloud-init="true">
       <url>docker://quay.io/containerdisks/centos-stream:9</url>
     </image>
 
