@@ -1,0 +1,72 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://manjaro.org/manjaro/rolling">
+    <short-id>manjaro</short-id>
+    <name>Manjaro</name>
+    <vendor>Manjaro</vendor>
+    <family>linux</family>
+    <distro>Manjaro</distro>
+    <derives-from id="http://archlinux.org/archlinux/rolling"/>
+
+    <release-status>rolling</release-status>
+
+    <resources arch="x86_64">
+      <minimum>
+        <cpu>1000000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>2147483648</ram>
+        <storage>5368709120</storage>
+      </minimum>
+      <recommended>
+        <cpu>2000000000</cpu>
+        <ram>4294967296</ram>
+        <storage>26843545600</storage>
+      </recommended>
+    </resources>
+
+    <variant id="gnome">
+      <name>Manjaro GNOME</name>
+    </variant>
+
+    <variant id="kde">
+      <name>Manjaro KDE</name>
+    </variant>
+
+    <variant id="xfce">
+      <name>Manjaro XFCE</name>
+    </variant>
+
+
+    <media arch="x86_64" live="true">
+      <variant id="gnome"/>
+      <url>https://manjaro.org/download/gnome</url>
+      <iso>
+        <volume-id>MANJARO_GNOME_</volume-id>
+      </iso>
+      <kernel>boot/vmlinuz-x86_64</kernel>
+      <initrd>boot/initramfs-x86_64.img</initrd>
+    </media>
+
+    <media arch="x86_64" live="true">
+      <variant id="kde"/>
+      <url>https://manjaro.org/download/plasma</url>
+      <iso>
+        <volume-id>MANJARO_KDE_</volume-id>
+      </iso>
+      <kernel>boot/vmlinuz-x86_64</kernel>
+      <initrd>boot/initramfs-x86_64.img</initrd>
+    </media>
+
+    <media arch="x86_64" live="true">
+      <variant id="xfce"/>
+      <url>https://manjaro.org/download/xfce</url>
+      <iso>
+        <volume-id>MANJARO_XFCE_</volume-id>
+      </iso>
+      <kernel>boot/vmlinuz-x86_64</kernel>
+      <initrd>boot/initramfs-x86_64.img</initrd>
+    </media>
+
+  </os>
+</libosinfo>

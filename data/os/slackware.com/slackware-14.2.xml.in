@@ -1,0 +1,154 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://slackware.com/slackware/14.2">
+    <short-id>slackware14.2</short-id>
+    <name>Slackware 14.2</name>
+    <version>14.2</version>
+    <vendor>Slackware Linux Project</vendor>
+    <family>linux</family>
+    <distro>slackware</distro>
+    <upgrades id="http://slackware.com/slackware/14.1"/>
+    <derives-from id="http://slackware.com/slackware/14.1"/>
+
+    <release-date>2016-07-01</release-date>
+
+    <devices>
+      <device id="http://usb.org/usb/80ee/0021"/> <!-- tablet -->
+      <device id="http://pcisig.com/pci/1af4/1000"/> <!-- virtio-net -->
+      <device id="http://pcisig.com/pci/1af4/1001"/> <!-- virtio-block -->
+    </devices>
+
+
+    <tree arch="i686">
+      <url>https://mirrors.slackware.com/slackware/slackware-14.2/</url>
+      <kernel>kernels/hugesmp.s/bzImage</kernel>
+      <initrd>isolinux/initrd.img</initrd>
+    </tree>
+
+    <tree arch="x86_64">
+      <url>https://mirrors.slackware.com/slackware/slackware64-14.2/</url>
+      <kernel>kernels/huge.s/bzImage</kernel>
+      <initrd>isolinux/initrd.img</initrd>
+    </tree>
+
+    <!-- CD -->
+    <media arch="i686">
+      <url>https://mirrors.slackware.com/slackware/slackware-iso/slackware-14.2-iso/slackware-14.2-install-d1.iso</url>
+      <iso>
+        <volume-id>S14.2d\d+</volume-id>
+        <system-id>LINUX</system-id>
+        <application-id>Slackware install 1</application-id>
+      </iso>
+    </media>
+    <!-- Disk 2 -->
+    <media arch="i686">
+      <url>https://mirrors.slackware.com/slackware/slackware-iso/slackware-14.2-iso/slackware-14.2-install-d2.iso</url>
+      <iso>
+        <volume-id>S14.2d2</volume-id>
+        <system-id>LINUX</system-id>
+        <application-id>Slackware install 2</application-id>
+      </iso>
+    </media>
+    <!-- Disk 3 -->
+    <media arch="i686">
+      <url>https://mirrors.slackware.com/slackware/slackware-iso/slackware-14.2-iso/slackware-14.2-install-d3.iso</url>
+      <iso>
+        <volume-id>S14.2d3</volume-id>
+        <system-id>LINUX</system-id>
+        <application-id>Slackware install 3</application-id>
+      </iso>
+    </media>
+    <!-- Disk 4 -->
+    <media arch="i686">
+      <url>https://mirrors.slackware.com/slackware/slackware-iso/slackware-14.2-iso/slackware-14.2-install-d4.iso</url>
+      <iso>
+        <volume-id>S14.2d4</volume-id>
+        <system-id>LINUX</system-id>
+        <application-id>Slackware install 4</application-id>
+      </iso>
+    </media>
+    <!-- Disk 5 -->
+    <media arch="i686">
+      <url>https://mirrors.slackware.com/slackware/slackware-iso/slackware-14.2-iso/slackware-14.2-install-d5.iso</url>
+      <iso>
+        <volume-id>S14.2d5</volume-id>
+        <system-id>LINUX</system-id>
+        <application-id>Slackware install 5</application-id>
+      </iso>
+    </media>
+
+    <!-- DVD -->
+    <media arch="i686">
+      <url>https://mirrors.slackware.com/slackware/slackware-iso/slackware-14.2-iso/slackware-14.2-install-dvd.iso</url>
+      <iso>
+        <volume-id>SlackDVD</volume-id>
+        <system-id>LINUX</system-id>
+        <application-id>Slackware 14.2 DVD</application-id>
+      </iso>
+      <kernel>kernels/hugesmp.s/bzImage</kernel>
+      <initrd>isolinux/initrd.img</initrd>
+    </media>
+
+    <!-- DVD -->
+    <media arch="x86_64">
+      <url>https://mirrors.slackware.com/slackware/slackware-iso/slackware64-14.2-iso/slackware64-14.2-install-dvd.iso</url>
+      <iso>
+        <volume-id>SlackDVD</volume-id>
+        <system-id>LINUX</system-id>
+        <application-id>Slackware64 14.2 DVD</application-id>
+      </iso>
+      <kernel>kernels/hugesmp.s/bzImage</kernel>
+      <initrd>isolinux/initrd.img</initrd>
+    </media>
+
+    <resources arch="all">
+      <minimum>
+        <n-cpus>1</n-cpus>
+        <cpu>1000000000</cpu>
+        <ram>67108864</ram>
+        <storage>1073741824</storage>
+      </minimum>
+
+      <recommended>
+        <n-cpus>1</n-cpus>
+        <cpu>1000000000</cpu>
+        <ram>1073741824</ram>
+        <storage>8589934592</storage>
+      </recommended>
+    </resources>
+
+    <resources arch="i686">
+      <minimum>
+        <n-cpus>1</n-cpus>
+        <cpu>1000000000</cpu>
+        <ram>67108864</ram>
+        <storage>1073741824</storage>
+      </minimum>
+
+      <recommended>
+        <n-cpus>1</n-cpus>
+        <cpu>1000000000</cpu>
+        <ram>1073741824</ram>
+        <storage>17179869184</storage>
+      </recommended>
+    </resources>
+
+    <resources arch="x86_64">
+      <minimum>
+        <n-cpus>1</n-cpus>
+        <cpu>1000000000</cpu>
+        <ram>67108864</ram>
+        <storage>1073741824</storage>
+      </minimum>
+
+      <recommended>
+        <n-cpus>1</n-cpus>
+        <cpu>1000000000</cpu>
+        <ram>1073741824</ram>
+        <storage>17179869184</storage>
+      </recommended>
+    </resources>
+
+  </os>
+</libosinfo>

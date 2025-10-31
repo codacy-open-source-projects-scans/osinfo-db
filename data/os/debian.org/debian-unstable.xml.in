@@ -1,0 +1,140 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://debian.org/debian/unstable">
+    <short-id>debianunstable</short-id>
+    <name>Debian unstable</name>
+    <version>unstable</version>
+    <vendor>Debian Project</vendor>
+    <family>linux</family>
+    <distro>debian</distro>
+    <codename>sid</codename>
+    <upgrades id="http://debian.org/debian/testing"/>
+    <derives-from id="http://debian.org/debian/testing"/>
+
+    <release-status>prerelease</release-status>
+
+    <resources arch="all">
+      <minimum>
+        <cpu>1000000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>1073741824</ram>
+        <storage>10737418240</storage>
+      </minimum>
+      <recommended>
+        <cpu>1000000000</cpu>
+        <ram>2147483648</ram>
+        <storage>21474836480</storage>
+      </recommended>
+    </resources>
+
+    <variant id="generic">
+      <name>Debian unstable (Generic)</name>
+    </variant>
+    <variant id="genericcloud">
+      <name>Debian unstable (Generic Cloud)</name>
+    </variant>
+    <variant id="nocloud">
+      <name>Debian unstable (No Cloud)</name>
+    </variant>
+    <variant id="live">
+      <name>Debian unstable (Live)</name>
+    </variant>
+
+    <!-- Live -->
+    <media arch="x86_64" live="true">
+      <variant id="live"/>
+      <iso>
+        <volume-id>d-live (unstable|sid) .. amd64</volume-id>
+      </iso>
+      <kernel>install/gtk/vmlinuz</kernel>
+      <initrd>install/gtk/initrd.gz</initrd>
+    </media>
+
+    <tree arch="x86_64">
+      <url>http://deb.debian.org/debian/dists/unstable/main/installer-amd64</url>
+      <kernel>current/images/netboot/debian-installer/amd64/linux</kernel>
+      <initrd>current/images/netboot/debian-installer/amd64/initrd.gz</initrd>
+    </tree>
+    <tree arch="aarch64">
+      <url>http://deb.debian.org/debian/dists/unstable/main/installer-arm64</url>
+      <kernel>current/images/netboot/debian-installer/arm64/linux</kernel>
+      <initrd>current/images/netboot/debian-installer/arm64/initrd.gz</initrd>
+    </tree>
+    <tree arch="armv7l">
+      <url>http://deb.debian.org/debian/dists/unstable/main/installer-armhf</url>
+      <kernel>current/images/netboot/vmlinuz</kernel>
+      <initrd>current/images/netboot/initrd.gz</initrd>
+    </tree>
+    <tree arch="ppc64le">
+      <url>http://deb.debian.org/debian/dists/unstable/main/installer-ppc64el</url>
+      <kernel>current/images/netboot/debian-installer/ppc64el/vmlinux</kernel>
+      <initrd>current/images/netboot/debian-installer/ppc64el/initrd.gz</initrd>
+    </tree>
+    <tree arch="riscv64">
+      <url>http://deb.debian.org/debian/dists/unstable/main/installer-riscv64</url>
+      <kernel>current/images/netboot/debian-installer/riscv64/linux</kernel>
+      <initrd>current/images/netboot/debian-installer/riscv64/initrd.gz</initrd>
+    </tree>
+    <tree arch="s390x">
+      <url>http://deb.debian.org/debian/dists/unstable/main/installer-s390x</url>
+      <kernel>current/images/generic/kernel.debian</kernel>
+      <initrd>current/images/generic/initrd.debian</initrd>
+    </tree>
+
+    <image arch="x86_64" format="qcow2" cloud-init="true">
+      <variant id="generic"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-generic-amd64-daily.qcow2</url>
+    </image>
+
+    <image arch="aarch64" format="qcow2" cloud-init="true">
+      <variant id="generic"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-generic-arm64-daily.qcow2</url>
+    </image>
+
+    <image arch="ppc64le" format="qcow2" cloud-init="true">
+      <variant id="generic"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-generic-ppc64el-daily.qcow2</url>
+    </image>
+
+    <image arch="riscv64" format="qcow2" cloud-init="true">
+      <variant id="generic"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-generic-riscv64-daily.qcow2</url>
+    </image>
+
+    <image arch="x86_64" format="qcow2" cloud-init="true">
+      <variant id="genericcloud"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-genericcloud-amd64-daily.qcow2</url>
+    </image>
+
+    <image arch="aarch64" format="qcow2" cloud-init="true">
+      <variant id="genericcloud"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-genericcloud-arm64-daily.qcow2</url>
+    </image>
+
+    <image arch="x86_64" format="qcow2">
+      <variant id="nocloud"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-nocloud-amd64-daily.qcow2</url>
+    </image>
+
+    <image arch="aarch64" format="qcow2">
+      <variant id="nocloud"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-nocloud-arm64-daily.qcow2</url>
+    </image>
+
+    <image arch="ppc64le" format="qcow2">
+      <variant id="nocloud"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-nocloud-ppc64el-daily.qcow2</url>
+    </image>
+
+    <image arch="riscv64" format="qcow2">
+      <variant id="nocloud"/>
+      <url>https://cloud.debian.org/images/cloud/sid/daily/latest/debian-sid-nocloud-riscv64-daily.qcow2</url>
+    </image>
+
+    <installer>
+      <script id='http://debian.org/debian/preseed/jeos'/>
+      <script id='http://debian.org/debian/preseed/desktop'/>
+    </installer>
+  </os>
+</libosinfo>

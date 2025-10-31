@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://libosinfo.org/linux/2024">
+    <short-id>linux2024</short-id>
+    <name>Generic Linux 2024</name>
+    <version>2024</version>
+    <vendor>Libosinfo</vendor>
+    <family>linux</family>
+    <derives-from id="http://ubuntu.com/ubuntu/24.04"/>
+
+    <release-date>2024-01-01</release-date>
+    <eol-date>2029-01-01</eol-date>
+
+    <resources arch='all' inherit='true'/>
+
+  </os>
+</libosinfo>

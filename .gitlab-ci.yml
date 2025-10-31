@@ -1,0 +1,128 @@
+stages:
+  - containers
+  - builds
+  - sanity_checks
+
+.multilib: &multilib |
+  dpkg_architecture=$(which dpkg-architecture 2>/dev/null || true)
+  rpm=$(which rpm 2>/dev/null || true)
+  if test -x "$dpkg_architecture"; then
+    multilib=$(dpkg-architecture -q DEB_TARGET_MULTIARCH);
+  elif test -x "$rpm"; then
+    multilib=$(rpm --eval '%{_lib}');
+  fi
+
+.native-environment: &native-environment |
+  export VIRT_PREFIX="$HOME/build/libvirt"
+  export PATH="$VIRT_PREFIX/bin:$PATH"
+  export C_INCLUDE_PATH="$VIRT_PREFIX/include"
+  export LD_LIBRARY_PATH="$VIRT_PREFIX/$multilib"
+  export PKG_CONFIG_PATH="$VIRT_PREFIX/$multilib/pkgconfig"
+  export XDG_DATA_DIRS="$VIRT_PREFIX/share:/usr/share:/usr/local/share"
+  export GI_TYPELIB_PATH="$VIRT_PREFIX/$multilib/girepository-1.0"
+  export OSINFO_SYSTEM_DIR="$VIRT_PREFIX/share/osinfo"
+  export MAKEFLAGS="-j $(getconf _NPROCESSORS_ONLN)"
+  export CCACHE_BASEDIR="$(pwd)"
+  export CCACHE_DIR="$CCACHE_BASEDIR/ccache"
+  export CCACHE_MAXSIZE="50M"
+  export PATH="$CCACHE_WRAPPERSDIR:$PATH"
+
+
+.native_build_job:
+  extends:
+    - .gitlab_native_build_job
+  cache:
+    paths:
+      - ccache
+    key: "$CI_JOB_NAME"
+  script:
+    - *multilib
+    - *native-environment
+    - HERE=$PWD
+    - cd /tmp
+    - git clone https://gitlab.com/libosinfo/osinfo-db-tools.git
+    - cd osinfo-db-tools
+    - mkdir build
+    - cd build
+    - meson .. . --prefix=$VIRT_PREFIX
+    - $NINJA install
+    - cd $HERE
+    - mkdir build
+    - cd build
+    - $MAKE -f ../Makefile VPATH=..
+    - $MAKE -f ../Makefile VPATH=.. install OSINFO_DB_TARGET="--system"
+    - $MAKE -f ../Makefile VPATH=.. check
+    - if test -x /usr/bin/rpmbuild && test "$RPM" != "skip";
+      then
+        rpmbuild --nodeps --define "_without_mingw 1" --define "_sourcedir $PWD" -ba osinfo-db.spec;
+      fi
+
+urlcheck:
+  image: python:latest
+  stage: sanity_checks
+  needs: []
+  before_script:
+    - apt-get update
+    - apt-get -y install gettext
+    - pip install pytest-xdist lxml requests
+  script:
+    - make -j$(nproc) data
+    # Overcommit 'nproc' because much of the time we'll
+    # be waiting on network I/O, and not CPU bound
+    - pytest -v -n $(expr $(nproc) '*' 4) tests/test_urls.py
+  rules:
+    - if: '$OSINFO_CI_CHECK_URLS'
+      when: on_success
+    - when: never
+
+
+# Going against our usual naming convention for jobs using prebuilt containers
+# here as we'll be consuming the job artifacts via a direct URL which includes
+# the GitLab job name, so let's go with a more convenient name
+publish:
+  extends:
+    - .gitlab_native_build_job
+  needs:
+    - job: x86_64-debian-12-container
+      optional: true
+  script:
+    - apt update && apt install -y osinfo-db-tools
+    - make V=1 ARCHIVE=osinfo-db-latest.tar.xz
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - osinfo-db-latest.tar.xz
+  variables:
+    TARGET_BASE_IMAGE: docker.io/library/debian:12-slim
+    NAME: debian-12
+
+.web:
+  image: docker.io/library/python:3.9-alpine
+  stage: builds
+  before_script:
+    - apk add git gpg gpg-agent
+  script:
+    - ./scripts/osinfo-db-web.py
+  artifacts:
+    paths:
+      - public/
+
+# This job creates artifacts which can be browsed without making live
+web:
+  extends: .web
+  rules:
+    # Only run if it is a merge request, or a forced pipeline
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $RUN_PIPELINE == "1"'
+      when: on_success
+    - when: never
+
+# This job creates artifacts and publishes them to the live site
+pages:
+  extends: .web
+  rules:
+    # We can publish the website from pushes to the main branch only
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+      when: on_success
+    - when: never
+
+include: '/ci/gitlab.yml'
